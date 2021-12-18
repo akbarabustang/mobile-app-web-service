@@ -1,5 +1,7 @@
 package com.akbardev.app.mobileappws.ui.controller;
 
+import com.akbardev.app.mobileappws.ui.model.request.UserDetailsRequestModel;
+import com.akbardev.app.mobileappws.ui.model.response.UserRest;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,9 +15,9 @@ public class UserController {
     }
 
     @PostMapping
-    public String createUsers()
+    public UserRest createUsers(@RequestBody UserDetailsRequestModel userDetails)
     {
-        return "post users";
+        return null;
     }
 
     @PutMapping
